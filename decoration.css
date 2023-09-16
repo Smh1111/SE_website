@@ -1,0 +1,11 @@
+button{
+    font-size: 50pt;
+    padding: 20px;
+    display: flex;
+    margin: auto;
+}
+.text{
+    align-items: center;
+    text-align: center;
+    font-size: 50pt;
+}
