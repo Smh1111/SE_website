@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.headerimg{
+    width: 100%;
+    height: 1500px;
+}
+.container{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: Sam;
+}
+.header_text{
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.nameofheader{
+    font-size: 70pt;
+}
