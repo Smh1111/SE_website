@@ -9,7 +9,7 @@ html,body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('SE header section image.jpg');
+    background-image: url('assets/SE header section image.jpg');
     background-size: cover;
 }
 
