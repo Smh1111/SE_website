@@ -1,0 +1,20 @@
+/* 
+
+n case you are wondering, this is for global css like for example, some buttons could have the
+same style, so you won't need to redefine it everytime when you wanna use the same button style in 
+a different page
+
+or maybe any style you are gonna be using in other pages
+for example, aj visit likes tables so much, so let's say we have one stylesheet for that table
+then 
+    create table.css under the 'styles' folder, then u can use it everywhere!
+*/
+
+
+/* 
+Maybe we could use some bootstrap or tailwind css components
+and create css files from those frameworks under this folder
+
+
+----- Then, import it in each page if we want some features from bootstrap or tailwind
+*/
