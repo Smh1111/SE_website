@@ -1,0 +1,8 @@
+.h1_container{
+    position: relative;
+    margin-top: 10%;
+}
+.introduction_text{
+    font-size: 2vw;
+    text-align: center;
+}
