@@ -7,6 +7,16 @@
     text-align: center;
 }
 .specialization_header{
-    font-size: 2vw;
+    font-size: 3vw;
     text-align: center;
+}
+.box_track_container{
+    display: flex;
+    border: 1px solid white;
+    justify-content: space-evenly;
+}
+.box_track{
+    border: 1px solid white;
+    text-align: center;
+    width: 500px;
 }
