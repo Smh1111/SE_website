@@ -1,0 +1,23 @@
+.h1_container{
+    position: relative;
+    margin-top: 10%;
+}
+.introduction_text{
+    font-size: 2vw;
+    text-align: center;
+}
+.specialization_header{
+    position: relative;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 20%;
+}
+.box_track_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8%;
+}
+.box_track{
+    text-align: center;
+    width: 500px;
+}
