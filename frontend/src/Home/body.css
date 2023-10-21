@@ -19,5 +19,13 @@
 }
 .box_track{
     text-align: center;
-    width: 500px;
+    width: 550px;
+}
+.size_text_track
+{
+    font-size: 1.5vw;
+}
+.header_track
+{
+    font-size: 3vw;
 }
