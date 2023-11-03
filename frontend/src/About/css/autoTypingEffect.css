@@ -1,0 +1,41 @@
+.test{
+	display: flex;
+      flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+
+	min-height: 300px;
+
+	background: #f0e3d3;
+	border-bottom: 3px solid green;
+
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.autoType-div span{
+      color: #125704;
+      position: relative;
+      font-size: larger;
+}
+
+.autoType-div span::before {
+      content: "";
+      height: 30px;
+      width: 2px;
+      position: absolute;
+      top: 50%;
+      right: -8px;
+      background: #BD53ED;
+      transform: translateY(-45%);
+      animation: blink 0.7s infinite;
+  }
+
+.autoType-div span.stop-blinking::before {
+      animation: none;
+}
+  
+@keyframes blink {
+      50% { opacity: 0 }
+}
