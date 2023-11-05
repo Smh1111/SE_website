@@ -1,4 +1,4 @@
-.test{
+.autoType-container{
 	display: flex;
       flex-direction: column;
 	align-items: center;
@@ -8,13 +8,32 @@
 	min-height: 300px;
 
 	background: #f0e3d3;
-	border-bottom: 3px solid green;
+	/*border-bottom: 3px solid green;*/
+
+	padding-left: 100px;
+	padding-right: 100px;
+
+      border-bottom-left-radius: 5em;
+      border-bottom-right-radius: 5em;
+}
+
+.test{
+      display: flex;
+      flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+
+	min-height: 600px;
+
+	background: #f0e3d3;
+	/*border-bottom: 3px solid green;*/
 
 	padding-left: 100px;
 	padding-right: 100px;
 }
-
 .autoType-div span{
+      
       color: #125704;
       position: relative;
       font-size: larger;

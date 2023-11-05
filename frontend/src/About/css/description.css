@@ -1,0 +1,34 @@
+.description-container{
+      display: flex;
+      flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+
+	min-height: 300px;
+
+	background: #08984b;
+	/*border-bottom: 3px solid green;*/
+
+	padding-left: 100px;
+	padding-right: 100px;
+
+}
+
+.icon-text-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--gap, 1rem);
+}
+
+.icon-image-container{
+      padding: 100px;
+      justify-content: center;
+      align-items: center;
+      
+}
+
+.icon-image-container img{
+      min-height: 90px;
+}
