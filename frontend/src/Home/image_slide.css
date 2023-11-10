@@ -3,6 +3,7 @@
     background-color: rgb(8, 6, 6);
     max-width: 1400px;
     padding: 60px 0;
+    margin-top: 10%;
 }
 .slide-container{
 	margin: 0 30px; 
@@ -38,7 +39,6 @@
 }
     
 .swiper-pagination-bullet{
-	
 	background-color: #333;
 }
     

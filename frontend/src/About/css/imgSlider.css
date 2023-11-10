@@ -20,8 +20,8 @@ body {
 .container{
     background-color: cyan;
     max-width: 1400px;
-  width: 100%;
-  padding: 60px 0;
+  	width: 100%;
+  	padding: 60px 0;
 }
 .slide-container {
 	margin: 0 30px;
@@ -41,15 +41,10 @@ body {
 	border-radius: 20px 20px 0 0;
     padding: 10px 10px;
 }
-
-
 .card {
 	background-color: red;
 	border-radius: 20px 20px 0 0;
 }
-
-
-
 .swiper-navBtn {
 	color: #000;
 	height: 50px;
