@@ -67,5 +67,13 @@
     text-align: center;
     margin-top: 30%;
 }
+.Glasgow_text{
+    display: flex;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    font-size: 2vw;
+    text-align: center;
+    
+}
 
   

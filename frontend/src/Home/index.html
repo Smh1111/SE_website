@@ -7,6 +7,8 @@
     <title>SE KMITL Website</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="image_slide.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -65,7 +67,7 @@
 
         <!-- Curriculum Section -->
         <div class="specialization_header">
-            <h1>Curriculum</h1>
+            <h1>Curriculum</h1> 
         </div>
         <div class="curriculum-line">
             <div class="circle">1</div>
@@ -78,9 +80,46 @@
         </div>
         <!-- KMITL Glassgow -->
         <div class="KMITL_Glassgow_header">
-            <h1>KMITL Glassgow</h1>
+            <h1>KMITL Glasgow</h1>
         </div>
-        
+        <div class="Glasgow_text">
+            <p>The KMITL-Glasgow Double-Degree Program in Software Engineering is a collaboration between KMITL and the University of Glasgow, 
+                UK. The program enables qualified students who have completed Year 2 in the SE program at the International College to enter Years 3 
+                and 4 of the Software Engineering program at the University of Glasgow's School of Computing Science. At Glasgow, the student will 
+                have an opportunity to study with world-renowned academics, as well as working on team projects with multi-national talents. 
+                This is an excellent opportunity for the students who wish to gain studying and living experience in the UK.
+            </p>
+        </div>
+        <div class="container swiper">
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="slide-container">
+    
+                <div class="card-wrapper swiper-wrapper">
+                    <!-- Lecturer 1 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="assets/profile1.jpg" alt="" />
+                        </div>
+                    </div>
+                    <!-- Lecturer 2 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="assets/main_building2.jpg" alt="" />
+                        </div>
+                    </div>
+    
+                    <!-- Lecturer 3 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="assets/Logo.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
     
 
@@ -88,7 +127,8 @@
     <div id="footer">
         
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script> 
 </body>
 
