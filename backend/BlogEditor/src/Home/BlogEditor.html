@@ -6,22 +6,32 @@
     <title>Blog Editor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+   
+
+    
     <div class="sidenav">
         <div class="sidebar-contents">
             <div class="sidebar-item">
                 <i class="fas fa-user"></i>
-                <p>Profile</p>
+                <a href="#"><p>Profile</p></a>
             </div>
             <div class="sidebar-item">
                 <i class="fas fa-home"></i>
                 <p>Home</p>
             </div>
             <div class="sidebar-item">
-                <i class="fas fa-plus"></i>
-                <p>New</p>
+                <a href="../New/newBlog.html">
+                    <i class="fas fa-plus"></i>
+                    <p>New</p>
+                </a>
+                
             </div>
             <div class="sidebar-item">
                 <i class="fas fa-history"></i>
@@ -29,22 +39,89 @@
             </div>
             
         </div>
-        <div class="button-container">
-            
-        </div>
+        
     </div>
-    <div class="main-content">
-        <div class="editor">
-            <!-- Your blog editor content goes here -->
+    <div class="main">
+        <div class="grid-container">
+            <div class="header">
+                <!-- Your blog editor content goes here -->
+                <h1>Hello</h1>
+            </div>
+            <div class="blog-templates">
+                <!-- Blog templates go here -->
+                
+                <div class="blog-templates-container">
+                    <div class="blog-card-wrapper">
+                        <div class="card">
+                            <div class="image-box">
+                                <a href="../New/newBlog.html">
+                                    <img src="assets/blank.png" alt="" />
+                                </a>
+                                
+                            </div>
+                            <div class="card-content">
+                                <h1>
+                                    Blank blog
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image-box">
+                                <button>
+                                    <img src="assets/blank.png" alt="" />
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <h1>
+                                    Blank blog
+                                </h1>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="recent-blogs">
+                <!-- Recent blogs go here -->
+                
+                <div class="blog-templates-container">
+                    <h1>recents</h1>
+                    <div class="blog-card-wrapper">
+                        <div class="card">
+                            <div class="image-box">
+                                <button>
+                                    <img src="assets/blank.png" alt="" />
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <h1>
+                                    Blank blog
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image-box">
+                                <button>
+                                    <img src="assets/blank.png" alt="" />
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <h1>
+                                    Blank blog
+                                </h1>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
         </div>
-        <div class="blog-templates">
-            <!-- Blog templates go here -->
-        </div>
-        <div class="recent-blogs">
-            <!-- Recent blogs go here -->
-        </div>
+        
     </div>
 
-    
+
 </body>
 </html>
