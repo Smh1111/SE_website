@@ -1,0 +1,27 @@
+.footer{
+    margin-top: 20%;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(43, 43, 43);
+}
+.section{
+    display: flex;
+    margin-left: 10%;
+}
+.text,
+.text a,
+.text a:visited{
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+image{
+    width: 2vw;
+    height: 2vw;
+}
+#instagram_icon{
+    margin-top: 20%
+}
