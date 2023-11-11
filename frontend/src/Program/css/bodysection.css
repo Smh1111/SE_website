@@ -8,11 +8,31 @@
     margin-top: 10%;
     width: 90vw;
 }
-.oneandtwoyear_content{
+.oneandtwoyear_content_section{
     display: flex;
+    flex-direction: column;
     margin-top: 10%;
 }
 .text{
     color: white;
     font-size: 5vw;
+}
+.oneandtwoyear_text{
+    display: flex;
+    color: white;
+    font-size: 2vw;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.content_container_for_first_and_second{
+    display: flex;
+    flex-direction: row;
+    margin: 10% auto;
+    gap: 400px;
+}
+.year1{
+    color: white;
+}
+.year2{
+    color: white;
 }

@@ -1,4 +1,4 @@
-const text = "TheB.Eng. in Software Engineering Programis a 4-year undergraduate program aiming at producing graduates who are capable of working confidently in the international software industry as well as pursuing postgraduate study and research in leading universities worldwide. The curriculum of the program is designed in accordance with the recent ACM/IEEE guideline for undergraduate curriculum in software engineering.";
+const text = "Dive into the world of software engineering with KMITL's SE program. Experience hands-on learning, innovative projects, and industry insights. Prepare for a transformative career in technology and innovation.";
 
 let index = 0;
 const speed = 10; // Speed of typing, in milliseconds
