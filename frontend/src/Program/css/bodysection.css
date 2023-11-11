@@ -1,0 +1,18 @@
+.bodysection{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.image{
+    margin-top: 10%;
+    width: 90vw;
+}
+.oneandtwoyear_content{
+    display: flex;
+    margin-top: 10%;
+}
+.text{
+    color: white;
+    font-size: 5vw;
+}

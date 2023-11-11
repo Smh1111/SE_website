@@ -1,0 +1,39 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(8, 6, 6);
+}
+.headersection{
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+}
+.headercontent{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 150px;
+}
+.text{
+    color: white;
+    font-size: 5vw;
+}
+.textcontent{
+    color: white;
+    font-size: 2vw;
+}
+.typed {
+    animation: blinking 1s infinite;
+    padding-right: 5px;
+}
+    
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blinking {
+    0% {border-right-color: transparent}
+    100% {border-right-color: transparent white}
+}
