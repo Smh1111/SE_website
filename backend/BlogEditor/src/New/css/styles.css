@@ -94,9 +94,7 @@ h1 {
 
 
 /*----------------Blog edit container--------------*/
-.editorjs-container{
-    background-color: aqua;
-}
+
 .blog-edit-container{
     display: grid;
     
@@ -120,6 +118,7 @@ h1 {
     font-weight: 600;
     color: #333;
 }
+/*-------------Input-field-------------*/
 .input-field{
     display: flex;
     align-items: center;
@@ -157,7 +156,8 @@ h1 {
 /*-------------editorjs-container-------------*/
 .editorjs-container{
     box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
- 
+    font-size: large;
+    /*background-color: aqua;*/
 }
 
 /*-------------publishBtn-------------*/

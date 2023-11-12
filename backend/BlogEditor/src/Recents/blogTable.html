@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,21 @@
     <!---------------Css---------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-    rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/blogTable.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!---------------Js files--------------->
-    </head>
+</head>
+
 <body>
     <div class="sidenav">
         <div class="sidebar-contents">
             <div class="sidebar-item">
                 <i class="fas fa-user"></i>
-                <a href="#"><p>Profile</p></a>
+                <a href="#">
+                    <p>Profile</p>
+                </a>
             </div>
             <div class="sidebar-item">
                 <a href="../Home/BlogEditor.html">
@@ -34,27 +36,37 @@
                     <i class="fas fa-plus"></i>
                     <p>New</p>
                 </a>
-                
+
             </div>
             <div class="sidebar-item">
                 <i class="fas fa-history"></i>
                 <p>Recent</p>
             </div>
-            
+
         </div>
-        
+
     </div>
     <div class="main">
         <div class="table-container">
-            
-            <div class="blogs-table">
 
-            </div>
+            <table class="blogs-table" id="table">
+                <caption>All Blogs published on the server</caption>
+                <tr>
+                    <th>No</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+
+                <!---------------------Table-contents------------------------->
+            
+                
+            </table>
         </div>
-        
+
     </div>
 
-    
+
     <!--------------------------Editor-Js WYDIWYS editor----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
@@ -64,7 +76,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
-    
-    <script src="./js/blogTable.js"></script> 
+
+    <script src="./js/blogTable.js"></script>
 </body>
+
 </html>
