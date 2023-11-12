@@ -1,0 +1,198 @@
+:root {
+      font-size: 16px;
+      font-family: 'Open Sans';
+  }
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+  }
+  body, html{
+      height: 100%;
+      margin: 0;
+  }
+  
+  a:hover{
+      color: beige;
+  }
+  a:visited{
+      color: white;
+  }
+  h1 {
+      margin: 0;
+  }
+  
+  .sidenav {
+      display: block;
+      height: 100%;
+      width: 180px;
+      position: fixed;
+      
+      top: 0;
+      left: 0;
+      background-color: #000; /* Updated background color to black */
+      color: #fff;
+      overflow-x: hidden;
+      padding-top: 20px;
+  }
+  
+  .sidebar-contents {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+  }
+  
+  .sidebar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+  
+  .sidebar-item i {
+      font-size: 30px;
+      /*background-color: white; /* Add background color to icons */
+      padding: 10px; /* Add some padding to the icons */
+      border-radius: 50%; /* Make icons circular */
+  }
+  
+  .sidebar-item:hover {
+      background-color: #333; /* Darker background on hover */
+      cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  .sidebar-item p {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #fff; /* Text color changed to white */
+  }
+  
+  .button-container {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+  }
+  
+  /* Add hover effect for the sidebar items */
+  .sidebar-item:hover {
+      background-color: #333; /* Darker background on hover */
+  }
+  
+  
+  /* main */
+  .main {
+      height: 100%;
+      
+      margin-left: 10rem;
+      padding: 2rem;
+      
+    }
+  
+  
+  
+  /*----------------Blog edit container--------------*/
+  
+  .blog-edit-container{
+      display: grid;
+      
+      width: 90%;
+      border-radius: 6px;
+      padding: 30px;
+      margin: 0 15px;
+      background-color: #fff;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  .blog-edit-container header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 40px;
+      align-items: center;
+      text-align: center;
+      font-weight: 600;
+      color: #333;
+  }
+  /*-------------Input-field-------------*/
+  .input-field{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 1rem;
+      padding: 1rem;
+      box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
+  }
+  .input-field label{
+      font-size: 40px;
+      font-weight: 500;
+      color: #2e2e2e;
+  }
+  .input-field input, select{
+      outline: none;
+      font-size: 40px;
+      font-weight: 400;
+      color: #333;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      padding: 10px 15px;
+      height: 42px;
+      margin: 10px 0;
+  }
+  .input-field input :focus,
+  .input-field select:focus{
+      box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+  }
+  /*-------------Blog-details-------------*/
+  .Blog-details{
+      
+      margin: 1rem;
+      padding: 1rem;
+  }
+  /*-------------editorjs-container-------------*/
+  .editorjs-container{
+      box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
+      font-size: large;
+      /*background-color: aqua;*/
+  }
+  
+  /*-------------publishBtn-------------*/
+  .publishBtn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      max-width: 200px;
+      width: 100%;
+      border: none;
+      outline: none;
+      color: #fff;
+      border-radius: 5px;
+      margin: 25px 0;
+      background-color: #4070f4;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
+  
+  }
+  .updateBtn:hover{
+      background-color: #1c212d;
+  }
+  .btnUpdate{
+      font-size: 1.5rem;
+      font-weight: 400;
+      box-shadow: 0 3px 6px rgba(147, 51, 51, 0.13);
+  
+  }
+  
+  .blog-edit-container form i{
+      justify-content: end;
+      font-size: 30px;
+      
+      padding: 20px 10px;
+      
+  }

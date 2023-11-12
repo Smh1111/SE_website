@@ -11,6 +11,8 @@
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+      <link rel="stylesheet" type="text/css" href="css/updateBlog.css">
+
       <!---------------Js files--------------->
 </head>
 
@@ -45,31 +47,38 @@
             </div>
 
       </div>
+      
       <div class="main">
 
             <div class="blog-edit-container">
-                  <div class="title">
-                        <span>Enter your title</span>
-
-                  </div>
-
-                  <div id="editorjs">
-
-                  </div>
-                  <div>
-                        <button id="save-button">Save</button>
-
-                  </div>
-
-                  <div id="edit-data">
-
-                  </div>
-
-
+                <form action="#">
+                    <div class="input-field">
+                        <label>Title</label>
+                        <input type="text" placeholder="Enter your title" required>
+                    </div>
+                    <div class="Blog-details">
+                        <header>Blog Details</header>
+                    </div>
+                    <div class="editorjs-container">
+                        <div id="editorjs">
+    
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="updateBtn">
+                            <span class="btnUpdate">Update</span>
+                            <i class="fas fa-upload"></i>
+                        </button>
+                    </div>
+                </form>
+    
+    
+    
             </div>
-
-      </div>
-
+    
+        </div>
+    
 
       <!--------------------------Editor-Js WYDIWYS editor----------------------------------------------->
       <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
