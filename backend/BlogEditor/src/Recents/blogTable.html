@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +7,20 @@
     <!---------------Css---------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!---------------Js files--------------->
-</head>
-
+    </head>
 <body>
     <div class="sidenav">
         <div class="sidebar-contents">
             <div class="sidebar-item">
                 <i class="fas fa-user"></i>
-                <a href="#">
-                    <p>Profile</p>
-                </a>
+                <a href="#"><p>Profile</p></a>
             </div>
             <div class="sidebar-item">
                 <a href="../Home/BlogEditor.html">
@@ -31,51 +30,31 @@
 
             </div>
             <div class="sidebar-item">
-                <i class="fas fa-plus"></i>
-                <p>New</p>
+                <a href="../New/newBlog.html">
+                    <i class="fas fa-plus"></i>
+                    <p>New</p>
+                </a>
+                
             </div>
             <div class="sidebar-item">
-                <a href="../Recents/blogTable.html">
-                    <i class="fas fa-history"></i>
-                    <p>Recent</p>
-                </a>
+                <i class="fas fa-history"></i>
+                <p>Recent</p>
             </div>
-
+            
         </div>
-
+        
     </div>
     <div class="main">
+        <div class="table-container">
+            
+            <div class="blogs-table">
 
-        <div class="blog-edit-container">
-            <form action="#">
-                <div class="input-field">
-                    <label>Title</label>
-                    <input type="text" placeholder="Enter your title" required>
-                </div>
-                <div class="Blog-details">
-                    <header>Blog Details</header>
-                </div>
-                <div class="editorjs-container">
-                    <div id="editorjs">
-
-                    </div>
-                </div>
-                
-                <div>
-                    <button class="publishBtn">
-                        <span class="btnPublish">Publish</span>
-                        <i class="fas fa-upload"></i>
-                    </button>
-                </div>
-            </form>
-
-
-
+            </div>
         </div>
-
+        
     </div>
 
-
+    
     <!--------------------------Editor-Js WYDIWYS editor----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
@@ -85,9 +64,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/editorjs-html@3.4.0/build/edjsHTML.js"></script>
-    <script src="./js/script.js"></script>
+    
+    <script src="./js/blogTable.js"></script> 
 </body>
-
 </html>

@@ -14,13 +14,13 @@ body, html{
     height: 100%;
     margin: 0;
 }
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
+a:hover{
+    color: beige;
+}
+a:visited{
+    color: white;
+}
 h1 {
     margin: 0;
 }
@@ -90,11 +90,109 @@ h1 {
     padding: 2rem;
     
   }
-.grid-container{
-    display: grid;
-    grid-template-rows: min-content 4fr 4fr; /* Header, blog-templates, recent-blogs */
-    
-    gap: 10px; /* Adjust the gap according to your design */
-    height: 100%;
 
+
+
+/*----------------Blog edit container--------------*/
+.editorjs-container{
+    background-color: aqua;
+}
+.blog-edit-container{
+    display: grid;
+    
+    width: 90%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.blog-edit-container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
+}
+.input-field label{
+    font-size: 40px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 40px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 10px 15px;
+    height: 42px;
+    margin: 10px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+/*-------------Blog-details-------------*/
+.Blog-details{
+    
+    margin: 1rem;
+    padding: 1rem;
+}
+/*-------------editorjs-container-------------*/
+.editorjs-container{
+    box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
+ 
+}
+
+/*-------------publishBtn-------------*/
+.publishBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(120, 57, 57, 0.8);
+
+}
+.publishBtn:hover{
+    background-color: #1c212d;
+}
+.btnPublish{
+    font-size: 1.5rem;
+    font-weight: 400;
+    box-shadow: 0 3px 6px rgba(147, 51, 51, 0.13);
+
+}
+
+.blog-edit-container form i{
+    justify-content: end;
+    font-size: 30px;
+    
+    padding: 20px 10px;
+    
 }
