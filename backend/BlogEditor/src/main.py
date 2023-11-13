@@ -2,9 +2,9 @@ from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from ZODB import FileStorage, DB
-import transaction
 
-from fastapi.middleware.cors import CORSMiddleware
+
+import transaction
 
 # Data structures for blogs
 class Blog(BaseModel):
@@ -12,7 +12,6 @@ class Blog(BaseModel):
     title: str
     blocks: str
     publishedAt: str
-
 
 app = FastAPI()
 
@@ -24,7 +23,6 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
-#_______________________ZODB database____________________
 
 # ZODB database setup
 storage = FileStorage.FileStorage('mydatabase.fs')
@@ -35,20 +33,35 @@ root = connection.root()
 # Counter for generating IDs
 blog_id_counter = 1
 
-#_______________________Utility Functions____________________
+# Utility Function to print all blogs
+def is_blog_id_exists(blog_id: str) -> bool:
+    for blog in list(root.values()):
+        if blog['id'] == blog_id:
+            return True
+    return False
 
 # Function to delete a blog by ID
+# Function to delete a blog by ID
 def delete_blog(blog_id: str):
-    if blog_id in root:
-        del root[blog_id]
-        transaction.commit()
-        return {"Success": f"Blog with ID {blog_id} deleted successfully"}
-    else:
+    try:
+        if is_blog_id_exists(blog_id):
+            del root[int(blog_id)]
+            transaction.commit()
+            return {"Success": f"Blog with ID {blog_id} deleted successfully"}
+        else:
+            raise HTTPException(status_code=404, detail=f"Blog with ID {blog_id} not found")
+    except KeyError:
         raise HTTPException(status_code=404, detail=f"Blog with ID {blog_id} not found")
+    except Exception as e:
+        print(f"Error deleting blog: {e}")
+        raise
+
 
 # Function to update a blog by ID
-def update_blog(blog_id: str, updated_blog: Blog):
-    if blog_id in root:
+def update_blog(updated_blog: Blog):
+
+    if is_blog_id_exists(updated_blog.id):
+        blog_id = int(updated_blog.id)
         root[blog_id]["title"] = updated_blog.title
         root[blog_id]["blocks"] = updated_blog.blocks
         root[blog_id]["publishedAt"] = updated_blog.publishedAt
@@ -57,7 +70,9 @@ def update_blog(blog_id: str, updated_blog: Blog):
     else:
         raise HTTPException(status_code=404, detail=f"Blog with ID {blog_id} not found")
 
-# ----------------------Route services-------------------------------
+print("hello")
+print(root.values())
+print(list(root.values()))
 
 # -----GET services----
 
@@ -68,13 +83,15 @@ async def get_all_blogs():
     return list(root.values())
 
 # GET a json-formatted blog by ID
-@app.get("/blogs/{id}")
-async def get_blog(id: str):
+@app.get("/blogs/{blog_id}")
+async def get_blog(blog_id: str):
     # Retrieve a blog by ID from the database
-    blog = root.get(id)
-    if blog is None:
-        raise HTTPException(status_code=404, detail="Blog not found")
-    return blog
+    
+    for blog in list(root.values()):
+        if blog['id'] == blog_id:
+            return blog
+    else:
+        raise HTTPException(status_code=404, detail=f"Blog with ID {blog_id} not found")
 
 
 # -----POST services----
@@ -101,12 +118,11 @@ async def create_new_blog(request: Request, user_blog: Blog):
     # Increment the ID counter for the next blog
     blog_id_counter += 1
 
-    
     return new_blog
 
-@app.put("/blogs/{id}")
-async def update_blog_endpoint(id: str, updated_blog: Blog):
-    return update_blog(id, updated_blog)
+@app.put("/blogs/update")
+async def update_blog_endpoint(request: Request,  updated_blog: Blog):
+    return update_blog(updated_blog)
 
 @app.delete("/blogs/{id}")
 async def delete_blog_endpoint(id: str):
@@ -116,5 +132,3 @@ async def delete_blog_endpoint(id: str):
 @app.on_event("shutdown")
 def shutdown_event():
     connection.close()
-
-

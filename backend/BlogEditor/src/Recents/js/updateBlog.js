@@ -1,5 +1,8 @@
 const editor = new EditorJS({
-	holder: "editorjs",
+	/**
+	 * Id of Element that should contain Editor instance
+	 */
+	holder: "edit-data",
 	tools: {
 		header: {
 			class: Header,
@@ -41,6 +44,47 @@ const editor = new EditorJS({
 		},
 	},
 });
+let blogId;
+
+document.addEventListener("DOMContentLoaded", async () => {
+	// Retrieve the blogId from sessionStorage
+	blogId = sessionStorage.getItem("editBlogId");
+  
+	// Now you have the blogId, and you can use it as needed
+  
+	console.log('Blog ID:', blogId, typeof (blogId));
+	
+	getBlog_populateData(blogId);
+
+});
+function getBlog_populateData(id) {
+	const apiUrl = "http://127.0.0.1:8000/blogs/" + id; // Adjust the port as needed
+	console.log(apiUrl);
+	fetch(apiUrl)
+	    .then((response) => {
+		  if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`);
+		  }
+		  return response.json();
+	    })
+	    .then((data) => {
+		  // data.id, data.title, data.blocks, data.publishedAt
+  
+		  // Process the data received from the API
+		  console.log("data ", data);
+		  console.log("data.title ", data.title);
+		  console.log("data.blocks ", data.blocks);
+		  const titleInput = document.getElementById("title");
+		  titleInput.value = data.title;
+  
+		  
+  
+	    })
+	    .catch((error) => {
+		  console.error("Fetch error:", error);
+	    });
+  }
+  
 // Function to get the current date and time
 function getCurrentDateTime() {
 	var currentDate = new Date();
@@ -72,13 +116,13 @@ confirmYesButton.addEventListener("click", async () => {
 
 	// Get the current date and time
 	var creationTime = getCurrentDateTime();
-
+	console.log("id: ", blogId, typeof(blogId));
 	console.log("Title: ", title, typeof(title));
 	console.log("savedData: ", savedData);
 	console.log("Blocks data from editor:", jsonBlocksData, typeof(jsonBlocksData));
 	console.log("Blog created on:", creationTime, typeof(creationTime));
 
-	upDateNewBlog(title, jsonBlocksData, creationTime);
+	//updateBlog(id, title, jsonBlocksData, creationTime);
 
 	// Hide the modal after confirming
 	confirmationModal.style.display = "none";
@@ -92,40 +136,6 @@ confirmNoButton.addEventListener("click", () => {
 
 
 /*---------------------------Using the post api----------------------------- */
-document.addEventListener("DOMContentLoaded", function () {
-	// Retrieve the blogId from sessionStorage
-	const blogId = sessionStorage.getItem("editBlogId");
-  
-	// Now you have the blogId, and you can use it as needed
-  
-	console.log('Blog ID:', blogId);
-});
-function getBlog(id) {
-	const apiUrl = "http://127.0.0.1:8000/blogs/" + id; // Adjust the port as needed
-
-	fetch(apiUrl)
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error(`HTTP error! Status: ${response.status}`);
-			}
-			return response.json();
-		})
-		.then((data) => {
-			// Assuming data is an array of objects with properties blogTitle and blogDate
-
-			data.forEach((item) => {
-				console.log("ID :" + item.id + "\ntitle : " + item.title + "\nblocks : " + item.blocks + "\npublished At : " + item.publishedAt);
-				populateData(item.id, item.title, item.publishedAt);
-			});
-
-			// Process the data received from the API
-
-			
-		})
-		.catch((error) => {
-			console.error("Fetch error:", error);
-		});
-}
 
 /*
 fetch('https://example.com/', {
@@ -133,16 +143,16 @@ fetch('https://example.com/', {
   body: new FormData(),
 });
 */
-function updateBlog(blogTitle, blogBlocks, blogPublishedAt) {
+function updateBlog(blogId, blogTitle, blogBlocks, blogPublishedAt) {
+
 	let newBlog = {
-		id: "0",
+		id: blogId,
 		title: blogTitle,
 		blocks: blogBlocks,
 		publishedAt: blogPublishedAt,
 	};
-	console.log("Blog fucking", JSON.stringify(newBlog), typeof(JSON.stringify(newBlog)));
-	const options = {
-		method: 'POST',
+		const options = {
+		method: 'PUT',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'

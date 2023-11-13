@@ -14,32 +14,48 @@ function populateData(blogID, blogTitle, blogDate) {
 	cell1.innerHTML = rowCount + ".";
 	cell2.innerHTML = blogTitle; // "New Blog Title"
 	cell3.innerHTML = blogDate; // "2023 Nov 12."
-	cell4.innerHTML = "<button class='edit-button' data-blog-id=" + blogID + ">Edit</button> <button>Delete</button>";
+	cell4.innerHTML = "<button class='edit-button' edit-blog-id="
+		+ blogID
+		+">Edit</button> <button button class='delete-button' delete-blog-id="
+		+ blogID
+		+ "> Delete</button > ";
 
 	row.appendChild(cell1);
 	row.appendChild(cell2);
 	row.appendChild(cell3);
 	row.appendChild(cell4);
 }
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (e) {
 	const table = document.getElementById("table");
   
 	// Add a click event listener to the table
 	table.addEventListener("click", function (event) {
-	    // Check if the clicked element is an "Edit" button
-	    if (event.target.classList.contains("edit-button")) {
-		  // Get the blog ID from the data attribute
-		  const blogId = event.target.getAttribute("data-blog-id");
-		// Store the blogId in sessionStorage
-		sessionStorage.setItem("editBlogId", blogId);
-		  // Navigate to the updateBlog page with the blog ID
-		  window.location.href = `updateBlog.html`;
-	    }
+		// Check if the clicked element is an "Edit" button
+		if (event.target.classList.contains("edit-button")) {
+			// Get the blog ID from the data attribute
+			const editBlogId = event.target.getAttribute("edit-blog-id");
+			// Store the blogId in sessionStorage
+			sessionStorage.setItem("editBlogId", editBlogId);
+			// Navigate to the updateBlog page with the blog ID
+			window.location.href = `updateBlog.html`;
+		}
+
+		if (event.target.classList.contains("delete-button")) {
+			// Get the blog ID from the data attribute
+			const deleteBlogId = event.target.getAttribute("delete-blog-id");
+			// Store the blogId in sessionStorage
+			sessionStorage.setItem("deleteBlogId", deleteBlogId);
+			// Navigate to the updateBlog page with the blog ID
+			window.location.href = `updateBlog.html`;
+
+			deleteBlogByID(deleteBlogId);
+		}
 	});
+	e.preventDefault();
   });
   
 /*---------------------------Using the GET api----------------------------- */
-const apiUrl = "http://127.0.0.1:8000/blogs/all"; // Adjust the port as needed
+const apiUrl = "http://127.0.0.1:8000/blogs/all"; 
 
 /*
 fetch('https://example.com/', {
@@ -62,7 +78,7 @@ function getAllBlogs() {
 		Blocks: blogBlocks,
 		publishedAt: blogPublishedAt,
 	};
-      */
+      */ 
 	fetch(apiUrl)
 		.then((response) => {
 			if (!response.ok) {
@@ -83,5 +99,19 @@ function getAllBlogs() {
 			console.error("Fetch error:", error);
 		});
 }
+function deleteBlogByID(id)
+{
+	const deleteURL = "http://127.0.0.1:8000/blogs/" + id;
+	const options = {
+		method: 'Delete',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		mode: 'cors',
 
+	};
+
+	fetch(deleteURL, options);
+}
 getAllBlogs();
