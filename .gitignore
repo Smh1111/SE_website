@@ -1,1 +1,5 @@
 backend/BlogEditor/src/venv
+backend/BlogEditor/src/mydatabase.fs
+backend/BlogEditor/src/mydatabase.fs.index
+backend/BlogEditor/src/mydatabase.fs.lock
+backend/BlogEditor/src/mydatabase.fs.tmp

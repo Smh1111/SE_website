@@ -17,6 +17,17 @@
 </head>
 
 <body>
+      <!-- Modal HTML structure -->
+      <div id="confirmationModal" class="modal">
+            <div class="modal-content">
+                  <p>Are you sure you want to publish?</p>
+                  <div>
+                        <button id="confirmYes" class="confirmYes">Yes</button>
+                        <button id="confirmNo" class="confirmNo">No</button>
+
+                  </div>
+            </div>
+      </div>
       <div class="sidenav">
             <div class="sidebar-contents">
                   <div class="sidebar-item">
@@ -40,45 +51,47 @@
 
                   </div>
                   <div class="sidebar-item">
-                        <i class="fas fa-history"></i>
-                        <p>Recent</p>
+                        <a href="../Recents/blogTable.html">
+                              <i class="fas fa-history"></i>
+                              <p>Recent</p>
+                        </a>
+
                   </div>
 
             </div>
 
       </div>
-      
+
       <div class="main">
 
             <div class="blog-edit-container">
-                <form action="#">
-                    <div class="input-field">
-                        <label>Title</label>
-                        <input type="text" placeholder="Enter your title" required>
-                    </div>
-                    <div class="Blog-details">
-                        <header>Blog Details</header>
-                    </div>
-                    <div class="editorjs-container">
-                        <div id="editorjs">
-    
+                  <form action="#">
+                        <div class="input-field">
+                              <label for="title">Title</label>
+                              <!------------------Title of the blog (ID = title)---------------------------->
+                              <input id="title" name="title" type="text" placeholder="Enter your title" required>
                         </div>
-                    </div>
-                    
-                    <div>
-                        <button class="updateBtn">
-                            <span class="btnUpdate">Update</span>
-                            <i class="fas fa-upload"></i>
-                        </button>
-                    </div>
-                </form>
-    
-    
-    
+                        <div class="Blog-details">
+                              <header>Blog Details</header>
+                        </div>
+                        <div class="editorjs-container">
+                              <div id="editorjs">
+
+                              </div>
+                        </div>
+
+                        <div>
+                              <button id="updateBtn" class="updateBtn">
+                                    <span class="btnUpdate">Update</span>
+                                    <i class="fas fa-upload"></i>
+                              </button>
+                        </div>
+                  </form>
+
             </div>
-    
-        </div>
-    
+
+      </div>
+
 
       <!--------------------------Editor-Js WYDIWYS editor----------------------------------------------->
       <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
