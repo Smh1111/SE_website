@@ -37,13 +37,13 @@
       
       color: #125704;
       position: relative;
-      font-size: larger;
+      font-size: large;
 }
 
 .autoType-div span::before {
       content: "";
-      height: 30px;
-      width: 2px;
+      height: 1.3rem;
+      width: 0.2rem;
       position: absolute;
       top: 50%;
       right: -8px;

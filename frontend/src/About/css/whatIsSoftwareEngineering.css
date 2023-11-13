@@ -1,0 +1,4 @@
+.rounded-bottom {
+      border-bottom-right-radius: 4.7rem; /* Adjust the value based on your preference */
+      overflow: hidden; /* This ensures the rounded corners are visible */
+    }

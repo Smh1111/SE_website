@@ -1,0 +1,25 @@
+.about-kmitl-se-container {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      /* Set the container to full height of the viewport */
+}
+
+.about-kmitl-se-wrapper {
+      width: 100%;
+      max-width: auto;
+      /* Adjust the max-width of the container based on your design */
+      padding: 2rem;
+      box-sizing: border-box;
+}
+
+.about-kmitl-se-card {
+      border: 2px solid #333;
+      /* Border color */
+      border-radius: 10px;
+      /* Adjust border-radius for rounded corners */
+      padding: 2px;
+      text-align: center;
+}

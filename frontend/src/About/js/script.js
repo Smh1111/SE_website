@@ -1,6 +1,6 @@
 /*----------------------------AutoTyping Effect----------------------------*/ 
 const dynamicText = document.querySelector("div span");
-const words = ["loremrhhfloremrhhfloremrhhfloremrhhfloremrhhfloremrhhfloremrhhf", "like Art", "the Future", "Everything"];
+const words = ["<Code>", "<Build>", "<Future>", "<Test>", "<Deploy>", "<Debug>"];
 
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;
