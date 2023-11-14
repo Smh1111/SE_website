@@ -10,7 +10,7 @@ import transaction
 class Blog(BaseModel):
     id: str
     title: str
-    blocks: str
+    blocks: object
     publishedAt: str
 
 app = FastAPI()
@@ -71,7 +71,6 @@ def update_blog(updated_blog: Blog):
         raise HTTPException(status_code=404, detail=f"Blog with ID {blog_id} not found")
 
 print("hello")
-print(root.values())
 print(list(root.values()))
 
 # -----GET services----

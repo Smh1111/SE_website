@@ -32,49 +32,89 @@ const typeEffect = () => {
 
 typeEffect();
 
+/*----------------------------fetching Data and  populating Data----------------------------*/ 
+const apiUrl = "http://127.0.0.1:8000/blogs/all"; 
 
+/*
+fetch('https://example.com/', {
+  method: 'GET',
+  body: new FormData(),
+});
+*/
+function getAllBlogs() {
+	/*
+	class Blog(BaseModel):
+		ID: int
+		title: str
+		Blocks: object
+		publishedAt: str
 
+	*/
+	/*
+	const newBlog = {
+		title: blogTitle,
+		Blocks: blogBlocks,
+		publishedAt: blogPublishedAt,
+	};
+      */ 
+	fetch(apiUrl)
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error(`HTTP error! Status: ${response.status}`);
+			}
+			return response.json();
+		})
+		.then((data) => {
+			// Assuming data is an array of objects with properties blogTitle and blogDate
+			data.forEach((item) => {
+				console.log("ID :" + item.id + "\ntitle : " + item.title + "\nblocks : " + item.blocks + "\npublished At : " + item.publishedAt);
+				populateData(item.id, item.title, item.publishedAt);
+			});
 
+			// Process the data received from the API
+		})
+		.catch((error) => {
+			console.error("Fetch error:", error);
+		});
+}
+document.addEventListener("DOMContentLoaded", function() {
+  // Article data (you can replace this with your actual data)
+  const articles = [
+    {
+      id: 0,
+      title: "Our first office",
+      imageUrl: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png",
+      description: "Over the past year, Volosoft has undergone many changes! After months of preparation.",
+      readTime: "2 minutes",
+      link: "#"
+    },
+    // Add more articles as needed
+  ];
 
+  // Function to generate HTML for an article
+  function createArticleHTML(article) {
+    return `
+      <article class="max-w-xs">
+        <a href="${article.link}">
+          <img src="${article.imageUrl}" class="mb-5 rounded-lg" alt="Image">
+        </a>
+        <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+          <a href="${article.link}">${article.title}</a>
+        </h2>
+        <p class="mb-4 text-gray-500 dark:text-gray-400">${article.description}</p>
+        <a href="${article.link}" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+          Read in ${article.readTime}
+        </a>
+      </article>
+    `;
+  }
 
+  // Get the article container element
+  const articleContainer = document.getElementById("articleContainer");
 
-
-
-
-
-/*----------------------------Lecturers----------------------------*/ 
-// Swipper js to get the scrolling effect
-var swiper = new Swiper(".slide-container", {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      sliderPerGroup: 4,
-      loop: true,
-      centerSlide: "true",
-      fade: "true",
-      grabCursor: "true",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        520: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1000: {
-          slidesPerView: 4,
-        },
-      },
-    });
-    
+  // Iterate over the articles and append them to the container
+  articles.forEach(article => {
+    const articleHTML = createArticleHTML(article);
+    articleContainer.innerHTML += articleHTML;
+  });
+});

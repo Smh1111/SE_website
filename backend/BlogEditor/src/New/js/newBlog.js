@@ -77,7 +77,7 @@ confirmYesButton.addEventListener("click", async () => {
 	console.log("Blocks data from editor:", jsonBlocksData, typeof(jsonBlocksData));
 	console.log("Blog created on:", creationTime, typeof(creationTime));
 
-	createNewBlog(title, jsonBlocksData, creationTime);
+	createNewBlog(title, savedData, creationTime);
 
 	// Hide the modal after confirming
 	confirmationModal.style.display = "none";
