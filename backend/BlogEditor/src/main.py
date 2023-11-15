@@ -6,7 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from ZODB import FileStorage, DB
 from fastapi import File, UploadFile
 from pathlib import Path
-from typing import Optional
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
+
 import transaction
 
 # Data structures for blogs
@@ -36,6 +39,28 @@ root = connection.root()
 # Counter for generating IDs
 blog_id_counter = 1
 
+
+# Serve the "uploads" directory as static files
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+
+
+@app.get("/image/{blog_id}")
+def get_image(blog_id: int):
+    # Assuming the images are named like "{blog_id}.png" or "{blog_id}.jpeg" in the "uploads" directory
+    image_path_png = os.path.join("uploads", f"{blog_id}.png")
+    image_path_jpeg = os.path.join("uploads", f"{blog_id}.jpeg")
+    image_path_jpg = os.path.join("uploads", f"{blog_id}.jpg")
+
+    # Check if the image file exists, prioritize PNG over JPEG
+    if os.path.isfile(image_path_png):
+        return FileResponse(image_path_png, media_type="image/png")
+    elif os.path.isfile(image_path_jpeg):
+        return FileResponse(image_path_jpeg, media_type="image/jpeg")
+    elif os.path.isfile(image_path_jpg):
+        return FileResponse(image_path_jpg, media_type="image/jpg")
+    else:
+        raise HTTPException(status_code=404, detail="Image not found")
+    
 # Utility Function to print all blogs
 def is_blog_id_exists(blog_id: str) -> bool:
     for blog in list(root.values()):
@@ -131,15 +156,16 @@ UPLOAD_FOLDER = Path("uploads")
 async def upload_image(image: UploadFile = File(...)):
     global blog_id_counter
 
-    id = str(blog_id_counter)
+    id = str(blog_id_counter-1)
   
 
     print(image.filename)
-    filename = f"{blog_id_counter}.{image.filename.split('.')[-1].lower()}"
+    filename = f"{id}.{image.filename.split('.')[-1].lower()}"
 
     file_path = UPLOAD_FOLDER / filename
     with file_path.open("wb") as f:
         f.write(image.file.read())
+
     image_link = f"/uploads/{blog_id_counter}_{image.filename}"  # Construct the link
     return {"filename": image.filename, "image_link": image_link}
 

@@ -1,6 +1,3 @@
-
-/*----------------------------fetching Data and  populating Data----------------------------*/
-
 document.addEventListener("DOMContentLoaded", function () {
   const apiUrl = "http://127.0.0.1:8000/blogs/all";
   getAllBlogs();
@@ -24,8 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Iterate over the articles and append them to the container
         recentBlogs.forEach((blog) => {
-            const blogHTML = createArticleHTML(blog);
-            blogContainer.innerHTML += blogHTML;
+          getImageUrl(blog.id)
+            .then((imageURL) => {
+              const blogHTML = createArticleHTML(blog, imageURL);
+              blogContainer.innerHTML += blogHTML;
+            })
+            .catch((error) => {
+              console.error("Error fetching image URL:", error);
+            });
         });
       })
       .catch((error) => {
@@ -33,20 +36,36 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  // Function to fetch image URL from the server
+  async function getImageUrl(blogId) {
+    const imageUrlApi = `http://127.0.0.1:8000/image/${blogId}`;
+    const options = {
+      
+      mode: 'cors',
+  
+    };
+    return fetch(imageUrlApi, options)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.url; // Extract the image URL from the response
+      });
+  }
+
   // Function to generate HTML for an article
-  function createArticleHTML(blog) {
-    const imageURL = "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png";
-    const eachBlogLink = "../Blog/eachBlog.html";
+  // Function to generate HTML for an article
+function createArticleHTML(blog, imageURL) {
+  const eachBlogLink = `../Blog/eachBlog.html?id=${blog.id}`;
 
-    // Create a unique identifier for each blog link
-    const linkId = `blogLink_${blog.id}`;
-
-    // Return a template string with HTML structure
-    return `
-      <article class="max-w-xs">
-        <a href="${eachBlogLink}" id="${linkId}" onclick="storeBlogId(${blog.id})">
-          <img src="${imageURL}" class="mb-5 rounded-lg" alt="Image">
+  return `
+    <article class="max-w-xs article-container">
+      <div class="grid-article-div">
+        <a href="${eachBlogLink}" onclick="storeBlogId(${blog.id})">
+          <img src="${imageURL}" class="blog-image mb-5 rounded-lg" alt="Image">
         </a>
+      </div>
+      <div >
         <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
           <a href="${eachBlogLink}" onclick="storeBlogId(${blog.id})">${blog.title}</a>
         </h2>
@@ -54,12 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="${eachBlogLink}" onclick="storeBlogId(${blog.id})" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
           Read
         </a>
-      </article>
-    `;
-  }
 
-  
+      <div>
+    </article>
+  `;
+}
+
 });
+
 // Function to store the blog ID in session storage
 function storeBlogId(blogId) {
   sessionStorage.setItem('blogId', blogId);
