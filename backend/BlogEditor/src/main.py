@@ -1,9 +1,12 @@
+
+
 from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from ZODB import FileStorage, DB
-
-
+from fastapi import File, UploadFile
+from pathlib import Path
+from typing import Optional
 import transaction
 
 # Data structures for blogs
@@ -65,6 +68,7 @@ def update_blog(updated_blog: Blog):
         root[blog_id]["title"] = updated_blog.title
         root[blog_id]["blocks"] = updated_blog.blocks
         root[blog_id]["publishedAt"] = updated_blog.publishedAt
+
         transaction.commit()
         return {"Success": f"Blog with ID {blog_id} updated successfully"}
     else:
@@ -96,18 +100,21 @@ async def get_blog(blog_id: str):
 # -----POST services----
 
 # Create a new blog from the json blog data in the {request body} sent from frontend
+
 @app.post("/blog")
 async def create_new_blog(request: Request, user_blog: Blog):
     global blog_id_counter
 
     print("Blog: ", user_blog)
 
+
+
     # Create a new blog with an incrementing ID
     new_blog = {
         "id": str(blog_id_counter),
         "title": user_blog.title,
         "blocks": user_blog.blocks,
-        "publishedAt": user_blog.publishedAt
+        "publishedAt": user_blog.publishedAt,
     }
 
     # Add the blog to the database
@@ -119,9 +126,27 @@ async def create_new_blog(request: Request, user_blog: Blog):
 
     return new_blog
 
+UPLOAD_FOLDER = Path("uploads")
+@app.post("/upload-image")
+async def upload_image(image: UploadFile = File(...)):
+    global blog_id_counter
+
+    id = str(blog_id_counter)
+  
+
+    print(image.filename)
+    filename = f"{blog_id_counter}.{image.filename.split('.')[-1].lower()}"
+
+    file_path = UPLOAD_FOLDER / filename
+    with file_path.open("wb") as f:
+        f.write(image.file.read())
+    image_link = f"/uploads/{blog_id_counter}_{image.filename}"  # Construct the link
+    return {"filename": image.filename, "image_link": image_link}
+
 @app.put("/blogs/update")
-async def update_blog_endpoint(request: Request,  updated_blog: Blog):
+async def update_blog_endpoint(request: Request, updated_blog: Blog):
     return update_blog(updated_blog)
+
 
 @app.delete("/blogs/{id}")
 async def delete_blog_endpoint(id: str):

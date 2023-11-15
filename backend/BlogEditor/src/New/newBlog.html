@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,9 +63,14 @@
         <div class="blog-edit-container">
             <form action="#">
                 <div class="input-field">
-                    <label>Title</label>
+                    <label for="title">Title</label>
                     <!------------------Title of the blog (ID = title)---------------------------->
                     <input id="title" name="title" type="text" placeholder="Enter your title" required>
+
+                </div>
+                <div class="input-field">
+                    <label for="image">Select background image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
                 </div>
                 <div class="Blog-details">
                     <header>Blog Details</header>
@@ -80,6 +87,7 @@
                         <i class="fas fa-upload"></i>
                     </button>
                 </div>
+                <div id="error-message" class="error-message"></div>
             </form>
 
 
@@ -91,16 +99,29 @@
 
     <!--------------------------Editor-Js WYDIWYS editor----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw@latest"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/editorjs-html@3.4.0/build/edjsHTML.js"></script>
     <script src="./js/newBlog.js"></script>
 </body>
 
 </html>
+
