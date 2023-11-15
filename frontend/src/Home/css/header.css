@@ -1,59 +1,53 @@
-html,body {
+html,
+body {
+    font-family: sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(8, 6, 6);
+    background-color: rgb(255, 255, 255);
 }
 
-.headersection{
+.header-section {
     position: relative;
     width: 100%;
     height: auto;
 }
-#image_back{
+
+#background-img {
     object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
+
 .gradient-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(8, 6, 6, 1) 100%);
-    
-}
-.logoimg {
-    position: absolute;
-    top: 3%;
-    left: 1%;
-    width: 5%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
 }
 
-.header_text {
+.header-text {
+    font-size: 2.125rem;
+    font-weight: 700;
     position: absolute;
-    top: 25%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
     text-align: center;
-    color: white;
-    font-family: Sam;
+    color: black;
     white-space: nowrap;
 }
-.nameofheader {
-    font-size: 5vw;
+
+.name-of-header {
     animation: fadeIn 1.25s forwards;
 }
 
-.nameofheader2 {
-    font-size: 5vw;
+.name-of-header2 {
     animation: fadeIn2 1.25s forwards;
-}
-
-.bodysection {
-    color: white;
 }
 
 @keyframes fadeIn {
@@ -77,5 +71,28 @@ html,body {
     to {
         opacity: 1;
         transform: translate(0px);
+    }
+}
+
+.top {
+    position: absolute;
+    width: 100%;
+    top: 0rem;
+}
+
+.logo-img {
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    width: 4rem;
+}
+
+@media (min-width: 768px) {
+    .header-text {
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+
+    .logo-img {
+        width: 8rem;
     }
 }

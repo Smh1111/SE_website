@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* HEADER */
+
+.col-text {
+    height: 20em;
+}
+
+.grid-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.col-left {
+    -webkit-box-ordinal-group: -1;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.col-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aligner-item {
+    width: 60%;
+}
+
+.Aligner-item h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.Aligner-item p {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+}
+
+.col-image {
+    background-size: cover;
+    background-position: 50% 70%;
+    position: relative;
+}
+
+.col-image::after {
+    width: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
+    height: 100%;
+}
+
+@media (max-width: 640px) {
+    .grid-flex {
+        height: 40em;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .col {
+        order: vertical;
+    }
+
+    .col-left {
+        -webkit-box-ordinal-group: 0;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    .col-text div p {
+        padding: 1em;
+    }
+
+    .col-image::after {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
+    }
+
+    .Aligner-item {
+        width: 90%;
+    }
+}
+
+
+/* 3 REASONS TO STUDY KMITL SE */
+
+.reasons-container {
+    color: #ffffff;
+    text-align: center;
+    background-color: #212529;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.reasons-container h1 {
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+.reasons-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reasons-grid {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: #212529;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.reasons-grid>article {
+    border: 0.125rem solid #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.reasons-grid>article h3 {
+    font-size: 1.20rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.reasons-grid>article img {
+    max-width: 100%;
+    margin-top: 1.125rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.reasons-grid .text {
+    padding: 16px 20px 30px;
+}
+
+
+
+/* STUDY PLAN CONTAINER */
+.yr-container {
+    max-width: 1300px;
+    margin: 30px auto;
+    margin-bottom: 14rem;
+}
+
+.yr-header {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.box {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.tab-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.tab-list::before {
+    content: '';
+    display: none;
+    height: 2px;
+    width: 16.6666666667%;
+    position: absolute;
+    bottom: 0;
+    background-color: #212529;
+    transition: .3s;
+}
+
+.tab-item {
+    font-size: 1.05rem;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    transition: .3s;
+    opacity: 0.5;
+    padding-top: 1rem;
+}
+
+.tab-toggle {
+    display: none;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-toggle:nth-child(1):checked~.tab-list .tab-item:nth-child(1),
+.tab-toggle:nth-child(2):checked~.tab-list .tab-item:nth-child(2),
+.tab-toggle:nth-child(3):checked~.tab-list .tab-item:nth-child(3),
+.tab-toggle:nth-child(4):checked~.tab-list .tab-item:nth-child(4),
+.tab-toggle:nth-child(5):checked~.tab-list .tab-item:nth-child(5),
+.tab-toggle:nth-child(6):checked~.tab-list .tab-item:nth-child(6) {
+    opacity: 1;
+    background-color: #212529;
+    color: white;
+}
+
+.tab-toggle:nth-child(2):checked~.tab-list::before {
+    transform: translateX(100%);
+}
+
+.tab-toggle:nth-child(3):checked~.tab-list::before {
+    transform: translateX(200%);
+}
+
+.tab-toggle:nth-child(4):checked~.tab-list::before {
+    transform: translateX(300%);
+}
+
+.tab-toggle:nth-child(5):checked~.tab-list::before {
+    transform: translateX(400%);
+}
+
+.tab-toggle:nth-child(6):checked~.tab-list::before {
+    transform: translateX(500%);
+}
+
+.tab-toggle:nth-child(1):checked~.tab-container .tab-content:nth-child(1),
+.tab-toggle:nth-child(2):checked~.tab-container .tab-content:nth-child(2),
+.tab-toggle:nth-child(3):checked~.tab-container .tab-content:nth-child(3),
+.tab-toggle:nth-child(4):checked~.tab-container .tab-content:nth-child(4),
+.tab-toggle:nth-child(5):checked~.tab-container .tab-content:nth-child(5),
+.tab-toggle:nth-child(6):checked~.tab-container .tab-content:nth-child(6) {
+    display: block;
+}
+
+.tab-trigger {
+    display: block;
+    padding: 10px 0;
+}
+
+.tab-container {
+    padding: 0;
+    margin: 0;
+}
+
+.semester-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.semester-container h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+@media (min-width:768px) {
+    .reasons-grid {
+        flex-direction: row;
+    }
+
+    .reasons-grid>article {
+        max-width: 30rem;
+    }
+
+    .tab-list {
+        flex-direction: row;
+    }
+
+    .tab-list::before {
+        display: block;
+    }
+
+    .reasons-container h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+}

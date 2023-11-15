@@ -1,50 +1,41 @@
+.swiper {
+	margin-top: 4rem;
+	margin-bottom: 9rem;
+}
 
-.container{
-    background-color: rgb(8, 6, 6);
-    max-width: 1400px;
-    padding: 60px 0;
-    margin-top: 10%;
+.swiper-slide img {
+	width: 100%;
+	height: auto;
+	object-fit: fill;
 }
-.slide-container{
-	margin: 0 30px; 
+
+div.swiper-button-prev,
+div.swiper-button-next {
+	display: none;
+	color: #212529;
 }
-.card-image{
-	width: 100px;
-	height: 30px;
+
+span.swiper-pagination-bullet {
+	background-color: #212529;
 }
-.card .image-box{
-	height: 400px;
-    background-color:rgb(8, 6, 6);
-}
-.card .image-box img {
-    margin-left: 25%;
-    margin-right: 50%;
-	height: 100%;
-    padding: 10px 10px;
-}
-.card{
-    background-color: rgb(8, 6, 6);
-	border-radius: 20px 20px 0 0;
-}
-.swiper-navBtn{
-	color: #000;
-	height: 50px;
-	width: 50px;
-	transform: translateY(-40%);
-	background: #fff;
-	border-radius: 100%;
-}
-.swiper-navBtn::before, .swiper-navBtn::after{
-	font-size: 24px;
-}
-    
-.swiper-pagination-bullet{
-	background-color: #333;
-}
-    
-@media screen and (max-width: 768px) {
-	.swiper-navBtn {
-	  display: none;
+
+@media (min-width: 768px) {
+
+	div.swiper-button-prev,
+	div.swiper-button-next {
+		display: block;
+	}
+
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-slide img {
+		width: 100%;
+		height: auto;
+		max-width: 35%;
+		object-fit: contain;
 	}
 }
-

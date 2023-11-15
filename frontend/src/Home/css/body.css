@@ -1,79 +1,198 @@
-.h1_container{
-    position: relative;
-    margin-top: 10%;
+.body-section {
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top: 2rem;
 }
-.introduction_text{
-    font-size: 2vw;
+
+.introduction {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.introduction-text {
+    display: inline;
+    color: black;
+    font-weight: normal;
+    font-size: 1.125rem;
+    margin-left: 2rem;
+}
+
+/* TRACK */
+
+.specialization {
+    color: white;
+    background-color: #212529;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2.75rem;
+}
+
+.specialization-header {
+    margin-top: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #F16322;
     text-align: center;
 }
-.specialization_header{
-    position: relative;
-    font-size: 3vw;
-    text-align: center;
-    margin-top: 20%;
-}
-.box_track_container{
+
+.specialization-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     margin-top: 8%;
 }
-.box_track{
+
+.track-box {
     text-align: center;
-    width: 550px;
 }
-.size_text_track
-{
-    font-size: 1.5vw;
+
+.track-header {
+    font-size: 1.65rem;
+    font-weight: 550;
 }
-.header_track
-{
-    font-size: 3vw;
+
+.track-text {
+    font-weight: normal;
+    font-size: 1.0125rem;
 }
-.curriculum-line {
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Adjust the margin-top as needed */
-    flex-direction: column;
-}
-  
-
-/* Style the circles with borders */
-/* Style the circles with borders and space between */
-.circle {
-    width: 5vw;
-    height: 5vw;
-    background-color: #ffffff; 
-    color: rgb(0, 0, 0);
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3vw;
-    margin-top: 300px;
-}
-.connect_line{
-    margin-top: -5px;
-    border-left: 1vw solid white;
-    height: 500px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.circle_children { 
-    margin-top: -5px;
+.steps {
+    margin: 0 auto;
 }
-.KMITL_Glassgow_header{
+
+.step {
+    display: block;
     position: relative;
-    font-size: 3vw;
-    text-align: center;
-    margin-top: 30%;
-}
-.Glasgow_text{
-    display: flex;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    font-size: 2vw;
-    text-align: center;
-    
+
+    .info {
+        margin: 8px 0 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0.5rem;
+        color: #F16322;
+    }
+
+    .text {
+        font-size: 1.15rem;
+        text-align: center;
+        color: black;
+        padding-bottom: 0;
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        word-break: break-word;
+    }
+
+    &:not(:last-child) {
+        &:after {
+            height: 0%;
+        }
+
+    }
 }
 
-  
+.number {
+    width: 4rem;
+    height: 4rem;
+    background-color: #F16322;
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GLASGOW */
+.glasgow-header {
+    margin-top: 5.125rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #212529;
+    text-align: center;
+}
+
+.glasgow-introduction {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.glasgow-introduction p {
+    text-indent: 1rem;
+    font-size: 1.05rem;
+
+}
+
+@media (min-width: 768px) {
+    .introduction {
+        margin-left: 2rem;
+    }
+
+    .introduction-text {
+        font-size: 1.5rem;
+        margin-left: 4%;
+    }
+
+    .specialization {
+        padding-bottom: 6rem;
+    }
+
+    .specialization-header {
+        margin-top: 2.5rem;
+        font-size: 2.6rem;
+    }
+
+    .specialization-container {
+        margin-top: 4%;
+        flex-direction: row;
+    }
+
+    .track-box {
+        margin-top: -1rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 33.33%;
+    }
+
+    .track-header {
+        font-size: 2rem;
+    }
+
+    .track-text {
+        font-size: 18px;
+    }
+
+    .step {
+        margin-top: 4rem;
+    }
+
+    .step-top {
+        margin-top: 0.25rem;
+    }
+
+
+}
