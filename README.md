@@ -14,7 +14,7 @@ BlogForgeKMITL is a powerful and intuitive web and blog editor tailored for the 
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Key Features](#key features)
+- [Key-Features](#keyfeatures)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
