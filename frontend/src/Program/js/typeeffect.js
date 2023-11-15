@@ -1,10 +1,10 @@
-const text = "Dive into the world of software engineering with KMITL's SE program. Experience hands-on learning, innovative projects, and industry insights. Prepare for a transformative career in technology and innovation.";
+const text = "We aim to produce graduates who are capable of working confidently in the international software industry as well as pursuing postgraduate study and research in leading universities worldwide.";
 
 let index = 0;
-const speed = 10; // Speed of typing, in milliseconds
+const speed = 90; // Speed of typing, in milliseconds
 
 function typeEffect() {
-    const textContentElement = document.querySelector('.textcontent');
+    const textContentElement = document.getElementById('textcontent');
     if (index < text.length) {
         textContentElement.innerHTML = text.substring(0, index) + '<span class="cursor">|</span>';
         index++;
