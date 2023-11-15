@@ -11,30 +11,18 @@ body {
 }
 
 .grid-flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
+    height: 40em;
     flex-grow: 1;
-    flex-direction: row;
-    -webkit-flex-direction: row;
+    flex-direction: column;
 }
 
 .col {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1;
 }
 
 .col-left {
-    -webkit-box-ordinal-group: -1;
-    -webkit-order: -1;
-    -ms-flex-order: -1;
-    order: -1;
+    order: 0;
 }
 
 .col-text {
@@ -44,11 +32,11 @@ body {
 }
 
 .Aligner-item {
-    width: 60%;
+    width: 90%;
 }
 
 .Aligner-item h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -70,39 +58,32 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
     height: 100%;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 768px) {
     .grid-flex {
-        height: 40em;
-        display: -webkit-flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .col {
-        order: vertical;
+        flex-direction: row;
+        height: 28rem;
     }
 
     .col-left {
-        -webkit-box-ordinal-group: 0;
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
-    }
-
-    .col-text div p {
-        padding: 1em;
+        order: -1;
     }
 
     .col-image::after {
-        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%);
+    }
+
+    .col-text {
+        justify-self: center;
+        align-self: center;
     }
 
     .Aligner-item {
-        width: 90%;
+        padding: 0;
+        width: 60%;
     }
 }
 
@@ -118,7 +99,7 @@ body {
 }
 
 .reasons-container h1 {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bolder;
 }
 
@@ -169,14 +150,16 @@ body {
 /* STUDY PLAN CONTAINER */
 .yr-container {
     max-width: 1300px;
-    margin: 30px auto;
     margin-bottom: 14rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .yr-header {
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 .box {
@@ -311,5 +294,11 @@ body {
     .reasons-container h1 {
         font-size: 2rem;
         font-weight: bolder;
+    }
+}
+
+@media (min-width:1300px) {
+    .yr-container {
+        margin: 30px auto;
     }
 }
