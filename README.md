@@ -1,5 +1,4 @@
-# SE_website - Web Programming Semester Project
-
+# Web Programming Semester Project
 ## Project Description
 
 SE_website is our ambitious web programming semester project. We aim to create an innovative and dynamic web application that showcases our skills in web development. This project is a collaborative effort by the following team members:
