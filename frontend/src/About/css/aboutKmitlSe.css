@@ -16,10 +16,20 @@
 }
 
 .about-kmitl-se-card {
-      border: 2px solid #333;
+      border: 0.1rem solid #000000;
       /* Border color */
-      border-radius: 10px;
+      border-radius: 0.2rem;
       /* Adjust border-radius for rounded corners */
-      padding: 2px;
+      padding: 3.5rem;
       text-align: center;
+      margin-top: -4.7rem;
+      margin-left: 4.7rem;
+      margin-right: 4.7rem;
+      border-radius: 6px;
+    
+    
+     
+    /*      box-shadow: (horizontal-offset) (vertical-offset) (blur) (spread) */
+    background-color: #ffffff; /* White container background */
+      box-shadow: 3px 3px 16px 2px;
 }

@@ -36,6 +36,7 @@
 }
 .card {
 	width: 90%;
+	border: 0.5px solid #000000;
     border-radius: 6px;
     padding: 30px;
     margin: 0 15px;
