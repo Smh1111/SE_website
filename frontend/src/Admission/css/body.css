@@ -1,0 +1,76 @@
+.tuition-fee-container h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: auto;
+    width: 90%;
+}
+
+.tuition-fee-box {
+    text-align: center;
+}
+
+.tuition-fee-table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+.tuition-fee-table th,
+.tuition-fee-table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.tuition-fee-table-program,
+.tuition-fee-table-cost {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.tuition-fee-table-year {
+    font-size: 0.865rem;
+}
+
+.entry-requirements h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: auto;
+    width: 90%;
+}
+
+.academic-record,
+.english-requirements {
+    background-color: #ddd;
+    margin: 1rem auto;
+    width: 90%;
+    padding: 1rem 1rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+
+    .subject {
+        font-weight: 600;
+    }
+
+    .header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.academic-record h2,
+.english-requirements h2 {
+    font-size: 1.2125rem;
+    font-weight: 700;
+}
+
+@media (min-width:768px) {
+    .tuition-fee-table {
+        width: 40%;
+    }
+}
