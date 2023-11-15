@@ -1,14 +1,17 @@
-# SE_website
-Web programming semester project
-Member:
-1.Soe Moe Htet-Stephen (65011693)
-2.Prem
+# SE_website - Web Programming Semester Project
+
+## Project Description
+
+SE_website is our ambitious web programming semester project. We aim to create an innovative and dynamic web application that showcases our skills in web development. This project is a collaborative effort by the following team members:
+
+1. **Soe Moe Htet-Stephen (ID: 65011693)**
+2. **[Add Second Member's Full Name] (ID: [Add ID])**
 
 # Project Title
-BlogForgeKMITL
+BlogForgeKMITL (Blog-Editor)
 
-## Description
-BlogForgeKMITL is a powerful and intuitive web and blog editor tailored for the King Mongkut's Institute of Technology Ladkrabang (KMITL) community. With redesigning the whole KMITL SE program website, Empowering users with a seamless writing and publishing experience, this platform combines cutting-edge technology with user-friendly features to streamline the creation and management of captivating blogs and website content.
+## What is BlogForgeKMITL
+A powerful and intuitive web and blog editor tailored for the King Mongkut's Institute of Technology Ladkrabang (KMITL) community. With redesigning the whole KMITL SE program website, Empowering users with a seamless writing and publishing experience, this platform combines cutting-edge technology with user-friendly features to streamline the creation and management of captivating blogs and website content.
 
 
 
