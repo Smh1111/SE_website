@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			// Store the blogId in sessionStorage
 			sessionStorage.setItem("deleteBlogId", deleteBlogId);
 			// Navigate to the updateBlog page with the blog ID
-			window.location.href = `updateBlog.html`;
+			window.location.href = `blogTable.html`;
 
 			deleteBlogByID(deleteBlogId);
 		}

@@ -164,6 +164,7 @@ function createNewBlog(blogTitle, blogBlocks, blogPublishedAt) {
 	    title: blogTitle,
 	    blocks: blogBlocks,
 	    publishedAt: blogPublishedAt,
+	    HTML: ""
 	};
   
 	const options = {

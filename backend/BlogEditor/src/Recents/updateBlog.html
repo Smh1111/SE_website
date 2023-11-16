@@ -28,14 +28,13 @@
                   </div>
             </div>
       </div>
+      
       <div class="sidenav">
             <div class="sidebar-contents">
-                  <div class="sidebar-item">
+                  <div class="sidebar-item"  id="logoutButton">
                         <i class="fas fa-user"></i>
-                        <a href="#">
-                              <p>Profile</p>
-                        </a>
-                  </div>
+                        <a href="#"><p>Log Out</p></a>
+                    </div>
                   <div class="sidebar-item">
                         <a href="../Home/BlogEditor.html">
                               <i class="fas fa-home"></i>
@@ -71,6 +70,10 @@
                               <!------------------Title of the blog (ID = title)---------------------------->
                               <input id="title" name="title" type="text" placeholder="Enter your title" required>
                         </div>
+                        <div class="input-field">
+                              <label for="image">Select background image:</label>
+                              <input type="file" id="image" name="image" accept="image/*" required>
+                          </div>
                         <div class="Blog-details">
                               <header>Blog Details</header>
                         </div>
@@ -95,16 +98,30 @@
 
       <!--------------------------Editor-Js WYDIWYS editor----------------------------------------------->
       <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/editorjs-html@3.4.0/build/edjsHTML.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/editorjs-html@3.4.0/build/edjsHTML.js"></script>
       <script src="./js/updateBlog.js"></script>
+
+      <script src="../LogOut/logOut.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,261 @@
+/*-----------------------------h1-h5---------------------------------*/
+
+
+.eachBlog h1 {
+      margin-bottom: 1.5rem;
+      /* Adjust the margin-bottom based on your design */
+      font-size: 2rem;
+      /* Adjust the font size based on your design */
+      font-weight: 600;
+      color: #003eba;
+      /* Adjust the color code based on your design */
+      text-transform: uppercase;
+      text-decoration: underline;
+}
+
+.eachBlog h2 {
+      margin-bottom: 1.5rem;
+      /* Adjust the margin-bottom based on your design */
+      font-size: 2rem;
+      /* Adjust the font size based on your design */
+      font-weight: 600;
+      color: #003eba;
+      /* Adjust the color code based on your design */
+      text-transform: uppercase;
+      text-decoration: underline;
+}
+
+.eachBlog h3 {
+      margin-bottom: 1.5rem;
+      /* Adjust the margin-bottom based on your design */
+      font-size: 2rem;
+      /* Adjust the font size based on your design */
+      font-weight: 600;
+      color: #003eba;
+      /* Adjust the color code based on your design */
+      text-transform: uppercase;
+      text-decoration: underline;
+}
+
+.eachBlog h4 {
+      margin-bottom: 1.5rem;
+      /* Adjust the margin-bottom based on your design */
+      font-size: 2rem;
+      /* Adjust the font size based on your design */
+      font-weight: 600;
+      color: #003eba;
+      /* Adjust the color code based on your design */
+      text-transform: uppercase;
+      text-decoration: underline;
+}
+
+.eachBlog h5 {
+      margin-bottom: 1.5rem;
+      /* Adjust the margin-bottom based on your design */
+      font-size: 2rem;
+      /* Adjust the font size based on your design */
+      font-weight: 600;
+      color: #003eba;
+      /* Adjust the color code based on your design */
+      text-transform: uppercase;
+      text-decoration: underline;
+}
+
+
+/*-----------------------------paragraph---------------------------------*/
+
+
+.eachBlog p {
+      margin-bottom: 0.75rem;
+      /* mb-3 */
+      color: #6b7280;
+      /* text-gray-500 */
+}
+
+.eachBlog .dark p {
+      color: #cbd5e0;
+      /* dark:text-gray-400 */
+}
+
+.eachBlog table {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid black;
+}
+
+/* Table Head Styles */
+.eachBlog table thead {
+      background-color: rgb(7, 19, 44);
+}
+
+/* Table Head Cell Styles */
+.eachBlog table th {
+      padding: 0.75rem;
+      text-align: left;
+      font-weight: bold;
+}
+
+/* Table Body Styles */
+.eachBlog table tbody {
+      background-color: #998d8d;
+}
+
+/* Table Body Row Styles */
+.eachBlog table tr {
+      border-bottom: 1px solid #e4e7eb;
+}
+
+/* Table Body Cell Styles */
+.eachBlog table td {
+      padding: 0.75rem;
+}
+
+/* Zebra striping for odd rows */
+.eachBlog table tbody tr:nth-child(odd) {
+      background-color: #f9fafb;
+}
+
+
+/*-----------------------------list---------------------------------*/
+
+.eachBlog li {
+      max-width: 28rem;
+      /* Adjust the max-width based on your design */
+      margin-top: 0.25rem;
+      /* Adjust the margin based on your design */
+      color: #050505;
+      /* Adjust the color based on your design */
+}
+
+.eachBlog li.dark {
+      color: #000000;
+      /* Adjust the color based on your dark mode design */
+}
+
+.eachBlog ul {
+      list-style-type: disc;
+      list-style-position: inside;
+}
+
+
+.eachBlog ol {
+      padding-left: 1.25rem;
+      /* ps-5 */
+      margin-top: 0.5rem;
+      /* mt-2 */
+}
+
+.eachBlog ol>li {
+      margin-bottom: 0.25rem;
+      /* space-y-1 */
+      list-style-type: decimal;
+      /* list-decimal */
+      list-style-position: inside;
+      /* list-inside */
+}
+
+/*-----------------------------link---------------------------------*/
+
+.eachBlog a {
+      color: #6b7280;
+      /* text-gray-500 */
+      transition: color 0.3s ease;
+      /* Adding a smooth transition for the hover effect */
+}
+
+.eachBlog a:hover {
+      color: #111827;
+      /* hover:text-gray-900 in light mode */
+}
+
+.eachBlog.dark a:hover {
+      color: #ffffff;
+      /* dark:hover:text-white in dark mode */
+}
+
+/*-----------------------------p---------------------------------*/
+
+
+.eachBlog p {
+      background-color: #ffffff;
+      /* Background color */
+      font-size: larger;
+      color: rgb(29, 16, 16);
+      font-weight: 500;
+
+}
+
+.eachBlog header {
+      background-color: #ffffff;
+      /* Background color */
+      font-size: large;
+      color: rgb(29, 16, 16);
+      font-weight: 500;
+      justify-content: center;
+      text-align: left;
+
+      padding-bottom: 1rem;
+
+}
+
+.spanTag {
+
+      font-size: small;
+      font: caption;
+      font-weight: 700;
+
+      text-align: left;
+
+      padding-bottom: 1rem;
+
+}
+
+/*-----------------------------img---------------------------------*/
+.eachBlog img {
+      height: auto;
+      /* h-auto */
+      max-width: 100%;
+      /* max-w-full */
+      border-radius: 8px;
+      /* rounded-lg */
+      border: 1px solid black;
+}
+
+.eachBlog img {
+      height: auto;
+      /* h-auto */
+      max-width: 36rem;
+      /* max-w-xl, assuming 1rem is equal to 16px */
+      border-radius: 8px;
+      /* rounded-lg */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      /* shadow-xl */
+}
+
+.dark .eachBlog img {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+      /* dark:shadow-gray-800 */
+}
+
+
+.eachBlog article {
+      width: 100%;
+      
+      /* Background color */
+
+      box-shadow:  inset -3px -3px 7px #221d1db2,
+    inset 3px 3px 7px rgba(43, 50, 60, 0.945);
+      /* Box shadow for a subtle effect */
+
+      /* Add any additional styles you need */
+      border: 0px solid black;
+      padding: 1rem;
+      /* Example padding, adjust as needed */
+      margin: auto;
+      border-radius: 8px;
+      
+      /* Example border-radius, adjust as needed */
+}

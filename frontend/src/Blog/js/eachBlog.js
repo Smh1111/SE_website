@@ -26,27 +26,65 @@ document.addEventListener("DOMContentLoaded", async () => {
 	  const articleContainer = document.getElementById("eachBlog");
 	  const imageURL = await getImageUrl(blog.id);
     
-	  console.log(imageURL);
-    
-	  const edjsParser = edjsHTML();
+		/*
+	  var html = '';
+		blog.blocks.blocks.forEach(function (block) {
+			switch (block.type) {
+				case 'header':
+					html += `<h${block.data.level}>${block.data.text}</h${block.data.level}>`;
+					break;
+				case 'paragraph':
+					html += `<p>${block.data.text}</p>`;
+					break;
+				case 'delimiter':
+					html += '<hr />';
+					break;
+				case 'image':
+					html += `<img class="img-fluid" src="${block.data.file.url}" title="${block.data.caption}" /><br /><em>${block.data.caption}</em>`;
+					break;
+				case 'list':
+					html += '<ul>';
+					block.data.items.forEach(function (li) {
+						html += `<li>${li}</li>`;
+					});
+					html += '</ul>';
+					break;
+				default:
+					console.log('Unknown block type', block.type);
+					console.log(block);
+					break;
+			}
+		})
+		const edjsParser = edjsHTML();
 	  const blog_HTML_contents_Array = edjsParser.parse(blog.blocks);
-	  const combinedString = blog_HTML_contents_Array.join(" ");
-    
+		const html = blog_HTML_contents_Array.join(" ");
+		console.log(html)
+		console.log(typeof(html))
+	 
+	 */
+		
+		 var parser = new edjsParser(undefined, undefined, undefined);
+		const html = parser.parse(blog.blocks);
+		console.log(html);
+
+	  
+		
 	  articleContainer.innerHTML = `
 	    <header class="mb-4 lg:mb-6 not-format">
 		<h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
 		  ${blog.title}
 		</h1>
-		<p class="text-gray-600 dark:text-gray-400 text-sm">${blog.publishedAt}</p>
+		<span class="text-gray-600 dark:text-gray-400 text-sm spanTag">${blog.publishedAt}</span>
 	    </header>
     
 	    <figure>
 		<img src="${imageURL}" alt="">
-		<figcaption>Digital art by Anonymous</figcaption>
-	    </figure>
-    
-	    ${combinedString}
-	  `;
+	    </figure>`
+		
+	    articleContainer.innerHTML +=html
+	    
+
+	  
 	} catch (error) {
 	  console.error("Error populating article:", error);
 	}
@@ -56,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	try {
 	  const imageUrlApi = `http://127.0.0.1:8000/image/${blogId}`;
 	  const options = {
-	    mode: 'cors',
+	    
 	  };
     
 	  const response = await fetch(imageUrlApi, options);

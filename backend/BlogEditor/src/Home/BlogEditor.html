@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Editor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-    rel="stylesheet"
-  />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-   
 
-    
+    <!-- Flowbite CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css" rel="stylesheet" />
+	
+</head>
+
+<body>
+
+
+
     <div class="sidenav">
         <div class="sidebar-contents">
-            <div class="sidebar-item">
+            <div class="sidebar-item" id="logoutButton">
                 <i class="fas fa-user"></i>
-                <a href="#"><p>Profile</p></a>
+                <a href="#">
+                    <p>Log Out</p>
+                </a>
             </div>
             <div class="sidebar-item">
                 <i class="fas fa-home"></i>
@@ -31,7 +36,7 @@
                     <i class="fas fa-plus"></i>
                     <p>New</p>
                 </a>
-                
+
             </div>
             <div class="sidebar-item">
                 <a href="../Recents/blogTable.html">
@@ -40,27 +45,38 @@
                 </a>
 
             </div>
-            
+
         </div>
-        
+
     </div>
     <div class="main">
         <div class="grid-container">
-            <div class="header">
-                <!-- Your blog editor content goes here -->
-                <h1>Hello</h1>
-            </div>
+            
             <div class="blog-templates">
                 <!-- Blog templates go here -->
-                
-                <div class="blog-templates-container">
-                    <div class="blog-card-wrapper">
+
+                <div class="blog-templates-container container mx-auto px-4">
+                    <div class="blog-card-wrapper ">
                         <div class="card">
                             <div class="image-box">
                                 <a href="../New/newBlog.html">
                                     <img src="assets/blank.png" alt="" />
                                 </a>
-                                
+
+                            </div>
+                            <div class="card-content container mx-auto px-4">
+                                <h1>
+                                    Blank blog
+                                </h1>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="image-box">
+                                <button>
+                                    <img src="assets/blank.png" alt="" />
+                                </button>
                             </div>
                             <div class="card-content">
                                 <h1>
@@ -80,51 +96,54 @@
                                 </h1>
                             </div>
                         </div>
-                        
                     </div>
-                    
+
                 </div>
             </div>
-            
-            <div class="recent-blogs">
+            <div class="header text-center">
+                <!-- Your blog editor content goes here -->
+
+                <h1
+                    class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                    Blog templates
+                </h1>
+
+
+            </div>
+
+            <div class="container text-center ">
+                <!-- Your blog editor content goes here -->
+
+                <h1
+                    class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                    Recent Blogs
+                </h1>
+
+
+            </div>
+            <div class="recent-blogs ">
                 <!-- Recent blogs go here -->
                 
-                <div class="blog-templates-container">
-                    <h1>recents</h1>
-                    <div class="blog-card-wrapper">
-                        <div class="card">
-                            <div class="image-box">
-                                <button>
-                                    <img src="assets/blank.png" alt="" />
-                                </button>
-                            </div>
-                            <div class="card-content">
-                                <h1>
-                                    Blank blog
-                                </h1>
-                            </div>
+                <div class="blog-templates-container container mx-auto px-4">
+                   
+                    <div class="px-4 mx-auto max-w-screen-xl">
+                        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Recent articles</h2>
+                        <div id="blogContainer" class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                            
+                            
                         </div>
-                        <div class="card">
-                            <div class="image-box">
-                                <button>
-                                    <img src="assets/blank.png" alt="" />
-                                </button>
-                            </div>
-                            <div class="card-content">
-                                <h1>
-                                    Blank blog
-                                </h1>
-                            </div>
-                        </div>
-                        
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-        
+
     </div>
 
+    <script src="../LogOut/logOut.js"></script>
+    <script src="./recentBlogs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
 
 </body>
+
 </html>

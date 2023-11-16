@@ -3,3 +3,6 @@ python-multipart==0.0.6
 uvicorn==0.23.2
 starlette==0.27.0
 ZODB==5.8.1
+pyeditorjs
+bleach
+jinja2
