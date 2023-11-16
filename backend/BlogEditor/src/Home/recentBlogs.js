@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Function to generate HTML for an article
       // Function to generate HTML for an article
     function createArticleHTML(blog, imageURL) {
+
+      console.log("Image url", imageURL)
       const eachBlogLink = `../Blog/eachBlog.html?id=${blog.id}`;
     
       return `

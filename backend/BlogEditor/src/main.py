@@ -107,6 +107,7 @@ def update_blog(updated_blog: Blog):
         root[blog_id]["title"] = updated_blog.title
         root[blog_id]["blocks"] = updated_blog.blocks
         root[blog_id]["publishedAt"] = updated_blog.publishedAt
+        root[blog_id]["HTML"] = updated_blog.HTML
 
         transaction.commit()
         return {"Success": f"Blog with ID {blog_id} updated successfully"}

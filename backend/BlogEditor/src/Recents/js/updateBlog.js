@@ -182,6 +182,7 @@ function updateBlog(blogId, blogTitle, blogBlocks, blogPublishedAt) {
 		title: blogTitle,
 		blocks: blogBlocks,
 		publishedAt: blogPublishedAt,
+		HTML: ""
 	};
 		const options = {
 		method: 'PUT',
