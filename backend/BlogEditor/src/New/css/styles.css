@@ -159,6 +159,353 @@ h1 {
     font-size: large;
     /*background-color: aqua;*/
 }
+/*-----------------------------h1-h5---------------------------------*/
+
+
+.editorjs-container h1 {
+    margin-bottom: 1.5rem;
+    /* Adjust the margin-bottom based on your design */
+    font-size: 2rem;
+    /* Adjust the font size based on your design */
+    font-weight: 600;
+    color: #003eba;
+    /* Adjust the color code based on your design */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.editorjs-container h2 {
+    margin-bottom: 1.5rem;
+    /* Adjust the margin-bottom based on your design */
+    font-size: 2rem;
+    /* Adjust the font size based on your design */
+    font-weight: 600;
+    color: #003eba;
+    /* Adjust the color code based on your design */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.editorjs-container h3 {
+    margin-bottom: 1.5rem;
+    /* Adjust the margin-bottom based on your design */
+    font-size: 2rem;
+    /* Adjust the font size based on your design */
+    font-weight: 600;
+    color: #003eba;
+    /* Adjust the color code based on your design */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.editorjs-container h4 {
+    margin-bottom: 1.5rem;
+    /* Adjust the margin-bottom based on your design */
+    font-size: 2rem;
+    /* Adjust the font size based on your design */
+    font-weight: 600;
+    color: #003eba;
+    /* Adjust the color code based on your design */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.editorjs-container h5 {
+    margin-bottom: 1.5rem;
+    /* Adjust the margin-bottom based on your design */
+    font-size: 2rem;
+    /* Adjust the font size based on your design */
+    font-weight: 600;
+    color: #003eba;
+    /* Adjust the color code based on your design */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+
+/*-----------------------------list---------------------------------*/
+
+.editorjs-container li {
+    max-width: 28rem;
+    /* Adjust the max-width based on your design */
+    margin-top: 0.25rem;
+    /* Adjust the margin based on your design */
+    color: #050505;
+    /* Adjust the color based on your design */
+}
+
+.editorjs-container li.dark {
+    color: #000000;
+    /* Adjust the color based on your dark mode design */
+}
+
+.editorjs-container ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+
+.editorjs-container ol {
+    padding-left: 1.25rem;
+    /* ps-5 */
+    margin-top: 0.5rem;
+    /* mt-2 */
+}
+
+.editorjs-container ol>li {
+    margin-bottom: 0.25rem;
+    /* space-y-1 */
+    list-style-type: decimal;
+    /* list-decimal */
+    list-style-position: inside;
+    /* list-inside */
+}
+/*-----------------------------checklist---------------------------------*/
+
+.editorjs-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .editorjs-container li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .editorjs-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid #4a5568;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+  
+  .editorjs-container input[type="checkbox"]:checked {
+    background-color: #4a5568;
+    border-color: #4a5568;
+  }
+  
+  .editorjs-container label {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: #2d3748;
+  }
+  
+  .dark .editorjs-container input[type="checkbox"]:checked {
+    background-color: #cbd5e0;
+    border-color: #cbd5e0;
+    color: #2d3748;
+  }
+
+/*-----------------------------quote---------------------------------*/
+
+  .editorjs-container blockquote {
+    border-left: 4px solid #4a5568;
+    padding-left: 1rem;
+    color: #2d3748;
+    margin: 0;
+  }
+
+  
+  .dark .editorjs-container blockquote {
+    border-left-color: #cbd5e0;
+    color: #2d3748;
+  }
+  
+
+  
+/*-----------------------------paragraph---------------------------------*/
+
+
+.editorjs-container p {
+    margin-bottom: 0.75rem;
+    /* mb-3 */
+    color: #6b7280;
+    /* text-gray-500 */
+}
+
+.editorjs-container .dark p {
+    color: #cbd5e0;
+    /* dark:text-gray-400 */
+}
+
+.editorjs-container table {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+/* Table Head Styles */
+.editorjs-container table thead {
+    background-color: rgb(7, 19, 44);
+}
+
+/* Table Head Cell Styles */
+.editorjs-container table th {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table Body Styles */
+.editorjs-container table tbody {
+    background-color: #998d8d;
+}
+
+/* Table Body Row Styles */
+.editorjs-container table tr {
+    border-bottom: 1px solid #e4e7eb;
+}
+
+/* Table Body Cell Styles */
+.editorjs-container table td {
+    padding: 0.75rem;
+}
+
+/* Zebra striping for odd rows */
+.editorjs-container table tbody tr:nth-child(odd) {
+    background-color: #f9fafb;
+}
+
+
+  
+/*-----------------------------link---------------------------------*/
+
+.editorjs-container a {
+    color: #6b7280;
+    /* text-gray-500 */
+    transition: color 0.3s ease;
+    /* Adding a smooth transition for the hover effect */
+}
+
+.editorjs-container a:hover {
+    color: #111827;
+    /* hover:text-gray-900 in light mode */
+}
+
+.editorjs-container.dark a:hover {
+    color: #ffffff;
+    /* dark:hover:text-white in dark mode */
+}
+/*-----------------------------delimieter, link, code---------------------------------*/
+.editorjs-container hr {
+    border: 1px solid #e2e8f0;
+    margin: 2rem 0;
+  }
+  
+  .editorjs-container a {
+    color: #3182ce;
+    text-decoration: underline;
+  }
+  
+  .editorjs-container a:hover {
+    color: #2c5282;
+  }
+  
+  .editorjs-container code {
+    background-color: #f7fafc;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .editorjs-container pre {
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+/*-----------------------------p---------------------------------*/
+
+
+.editorjs-container p {
+    background-color: #ffffff;
+    /* Background color */
+    font-size: larger;
+    color: rgb(29, 16, 16);
+    font-weight: 500;
+
+}
+
+.editorjs-container header {
+    background-color: #ffffff;
+    /* Background color */
+    font-size: large;
+    color: rgb(29, 16, 16);
+    font-weight: 500;
+    justify-content: center;
+    text-align: left;
+
+    padding-bottom: 1rem;
+
+}
+
+.spanTag {
+
+    font-size: small;
+    font: caption;
+    font-weight: 700;
+
+    text-align: left;
+
+    padding-bottom: 1rem;
+
+}
+
+/*-----------------------------img---------------------------------*/
+.editorjs-container img {
+    height: auto;
+    /* h-auto */
+    max-width: 100%;
+    /* max-w-full */
+    border-radius: 8px;
+    /* rounded-lg */
+    border: 1px solid black;
+}
+
+.editorjs-container img {
+    height: auto;
+    /* h-auto */
+    max-width: 36rem;
+    /* max-w-xl, assuming 1rem is equal to 16px */
+    border-radius: 8px;
+    /* rounded-lg */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* shadow-xl */
+}
+
+.dark .editorjs-container img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    /* dark:shadow-gray-800 */
+}
+
+
+.editorjs-container article {
+    width: 100%;
+    
+    /* Background color */
+
+    box-shadow:  inset -3px -3px 7px #221d1db2,
+  inset 3px 3px 7px rgba(43, 50, 60, 0.945);
+    /* Box shadow for a subtle effect */
+
+    /* Add any additional styles you need */
+    border: 0px solid black;
+    padding: 1rem;
+    /* Example padding, adjust as needed */
+    margin: auto;
+    border-radius: 8px;
+    
+    /* Example border-radius, adjust as needed */
+}
 
 /*-------------publishBtn-------------*/
 .publishBtn{
@@ -261,3 +608,5 @@ h1 {
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
+
+

@@ -62,6 +62,101 @@
 }
 
 
+/*-----------------------------list---------------------------------*/
+
+.eachBlog li {
+      max-width: 28rem;
+      /* Adjust the max-width based on your design */
+      margin-top: 0.25rem;
+      /* Adjust the margin based on your design */
+      color: #050505;
+      /* Adjust the color based on your design */
+}
+
+.eachBlog li.dark {
+      color: #000000;
+      /* Adjust the color based on your dark mode design */
+}
+
+.eachBlog ul {
+      list-style-type: disc;
+      list-style-position: inside;
+}
+
+
+.eachBlog ol {
+      padding-left: 1.25rem;
+      /* ps-5 */
+      margin-top: 0.5rem;
+      /* mt-2 */
+}
+
+.eachBlog ol>li {
+      margin-bottom: 0.25rem;
+      /* space-y-1 */
+      list-style-type: decimal;
+      /* list-decimal */
+      list-style-position: inside;
+      /* list-inside */
+}
+/*-----------------------------checklist---------------------------------*/
+
+.eachBlog ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .eachBlog li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .eachBlog input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 1.2em;
+      height: 1.2em;
+      border: 2px solid #4a5568;
+      border-radius: 4px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+    }
+    
+    .eachBlog input[type="checkbox"]:checked {
+      background-color: #4a5568;
+      border-color: #4a5568;
+    }
+    
+    .eachBlog label {
+      display: inline-block;
+      margin-left: 0.5rem;
+      color: #2d3748;
+    }
+    
+    .dark .eachBlog input[type="checkbox"]:checked {
+      background-color: #cbd5e0;
+      border-color: #cbd5e0;
+      color: #2d3748;
+    }
+
+/*-----------------------------quote---------------------------------*/
+
+    .eachBlog blockquote {
+      border-left: 4px solid #4a5568;
+      padding-left: 1rem;
+      color: #2d3748;
+      margin: 0;
+    }
+
+    
+    .dark .eachBlog blockquote {
+      border-left-color: #cbd5e0;
+      color: #2d3748;
+    }
+    
+
+    
 /*-----------------------------paragraph---------------------------------*/
 
 
@@ -119,44 +214,7 @@
 }
 
 
-/*-----------------------------list---------------------------------*/
-
-.eachBlog li {
-      max-width: 28rem;
-      /* Adjust the max-width based on your design */
-      margin-top: 0.25rem;
-      /* Adjust the margin based on your design */
-      color: #050505;
-      /* Adjust the color based on your design */
-}
-
-.eachBlog li.dark {
-      color: #000000;
-      /* Adjust the color based on your dark mode design */
-}
-
-.eachBlog ul {
-      list-style-type: disc;
-      list-style-position: inside;
-}
-
-
-.eachBlog ol {
-      padding-left: 1.25rem;
-      /* ps-5 */
-      margin-top: 0.5rem;
-      /* mt-2 */
-}
-
-.eachBlog ol>li {
-      margin-bottom: 0.25rem;
-      /* space-y-1 */
-      list-style-type: decimal;
-      /* list-decimal */
-      list-style-position: inside;
-      /* list-inside */
-}
-
+    
 /*-----------------------------link---------------------------------*/
 
 .eachBlog a {
@@ -175,7 +233,35 @@
       color: #ffffff;
       /* dark:hover:text-white in dark mode */
 }
-
+/*-----------------------------delimieter, link, code---------------------------------*/
+.eachBlog hr {
+      border: 1px solid #e2e8f0;
+      margin: 2rem 0;
+    }
+    
+    .eachBlog a {
+      color: #3182ce;
+      text-decoration: underline;
+    }
+    
+    .eachBlog a:hover {
+      color: #2c5282;
+    }
+    
+    .eachBlog code {
+      background-color: #f7fafc;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .eachBlog pre {
+      background-color: #f7fafc;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    
 /*-----------------------------p---------------------------------*/
 
 

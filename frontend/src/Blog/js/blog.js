@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageUrlApi = `http://127.0.0.1:8000/image/${blogId}`;
     const options = {
       
-      mode: 'cors',
+      method: 'GET',
+    //mode: 'no-cors',
   
     };
     return fetch(imageUrlApi, options)

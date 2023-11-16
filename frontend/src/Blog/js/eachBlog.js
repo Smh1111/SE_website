@@ -56,8 +56,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 			}
 		})
 		const edjsParser = edjsHTML();
-	  const blog_HTML_contents_Array = edjsParser.parse(blog.blocks);
+	  	const blog_HTML_contents_Array = edjsParser.parse(blog.blocks);
 		const html = blog_HTML_contents_Array.join(" ");
+
+
 		console.log(html)
 		console.log(typeof(html))
 	 
@@ -94,7 +96,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 	try {
 	  const imageUrlApi = `http://127.0.0.1:8000/image/${blogId}`;
 	  const options = {
-	    
+		method: 'GET',
+		//mode: 'no-cors',
 	  };
     
 	  const response = await fetch(imageUrlApi, options);
