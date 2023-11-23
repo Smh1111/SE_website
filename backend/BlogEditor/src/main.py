@@ -24,6 +24,7 @@ class Blog(BaseModel):
     title: str
     blocks: object
     publishedAt: str
+    
     HTML: str
 
 app = FastAPI()
