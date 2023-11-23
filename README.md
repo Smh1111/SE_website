@@ -4,7 +4,9 @@
 SE_website is our ambitious web programming semester project. We aim to create an innovative and dynamic web application that showcases our skills in web development. This project is a collaborative effort by the following team members:
 
 1. **Soe Moe Htet-Stephen (ID: 65011693)**
-2. **[Add Second Member's Full Name] (ID: [Add ID])**
+2. **Jirapat Ruetrakul (ID: 65011313)**
+
+If you want to see the details in pdf, here is [pdf file](/SoeMoeHtet_Prem_Project_Report.pdf)
 
 # Project Title
 BlogForgeKMITL (Blog-Editor)
@@ -17,14 +19,9 @@ A powerful and intuitive web and blog editor tailored for the King Mongkut's Ins
 ## Table of Contents
 - [Introduction](#introduction)
 - [Key-Features](#key-features)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
-- [Documentation](#documentation)
-- [Issues](#issues)
-- [Changelog](#changelog)
+- [Web-Pages](#web-pages)
+- [API](#api)
+
 
 ## Introduction
 Provide step-by-step instructions on how to install your project. Include any dependencies that need to be installed.
@@ -65,26 +62,31 @@ BlogForgeKMITL is a robust web and blog editor specifically tailored for the Kin
 
 BlogForgeKMITL is designed not only as a tool for content creation but as a comprehensive platform to showcase the diverse ideas, achievements, and experiences within the KMITL community.
 
-## Usage
-Explain how to use your project. Include examples if applicable.
+## Web-Pages
+These are some snap shots of the website
+# Blog-Editor
 
-## Configuration
-If your project requires configuration, provide details on how to set it up.
+![Alt text](./images/Blogeditor/create-new-blog.jpg)
+![Alt text](./images/Blogeditor/recent.jpg)
 
-## Contributing
-Explain how others can contribute to your project. Include guidelines for submitting pull requests, reporting issues, etc.
+# Redeisgn SE website
+1. **Home Page**
+![home-1](./images/home/home-1.png)
+![home-2](./images/home/home-2.png)
 
-## Credits
-Give credit to any third-party libraries or tools that you used.
 
-## License
-Specify the license under which your project is distributed.
+2. **About Page**
+![about-1](./images/about/about-1.png)
+![about-2](./images/about/about-1.png)
 
-## Documentation
-Link to or provide documentation, if it exists in a separate file or location.
 
-## Issues
-Encourage users to report any issues or bugs and explain how to do so.
+3. **program Page**
+![program-1](./images/program/program-1.png)
+![program-2](./images/program/program-2.png)
 
-## Changelog
-Keep a record of changes made to your project over time.
+4. **blog Page**
+![blog](./images/blog.png)
+
+## API
+
+![Alt text](./images/api.png)
